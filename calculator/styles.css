@@ -6,50 +6,59 @@ html {
 }
 body {
     background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 .main-frame {
-    margin: 25px auto;
     width: 400px;
-    height: 550px;
+    height: 514px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 8px;
     background-color: rgb(40, 40, 40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title {
-    margin-top: -17px;
-    margin-bottom: -17px;
-    padding-left: 5px;
+    margin: -14px 0;
+    padding: 5px;
     color: rgb(142, 140, 140);
     font-weight: bold;
+    width: 100%; 
+    text-align: left;
 }
 #display {
     display: flex;
-    text-align: left;
-    margin: 0 auto;
-    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
     width: 360px;
     height: 100px;
     border-radius: 8px;
     background-color: rgb(49, 49, 49);
     color: rgb(142, 140, 140);
     font-size: 3rem;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.buttons {
+    width: 360px;
+    height: auto;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 button {            
     justify-content: center;
     cursor: pointer;
     border-radius: 8px;
     background-color: rgb(69, 0, 0);
-    color:rgb(142, 140, 140);
+    color: rgb(142, 140, 140);
     font-size: 20px;
     font-weight: bold;
-}
-.buttons {
-    width: 396px;
-    height: 415px;
-    padding: 20px;
-    gap: 2px;
-    display: grid;
-    grid-template-columns:  repeat(4, 1fr); /*fr= fractional unit 1fr indicates one column takes even amount of space*/
+    height: 67px;
 }
 button:hover {
     background-color: rgb(90, 30, 30);
@@ -67,11 +76,71 @@ button:active {
     background-color: rgba(60, 99, 124, 0.582);
 }
 
-@media (max-width: 768px) { /* For tablets and phones */
-#display {
-    font-size: 2rem; /* Reduce font size */
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Full width */
-    height: auto; /* Allow height to adjust naturally */
+@media (orientation: landscape) and (max-width: 768px) { 
+    .main-frame {
+        width: 95vw; /* Scale the main frame width to fit smaller screens */
+        height: calc(50vw * (514 / 400)); /* Maintain aspect ratio */
+    }
+    #display {
+        width: 93%;
+        height: calc(90vw * (100 / 360)); /* Scale height proportionally */
+        font-size: 2.5rem; /* Adjust font size */ 
+    }
+    .buttons {
+        width: 60%; /* Adjust button container width */
+        height: auto;
+        margin-top: 17px;
+        margin-bottom: 15px;
+    }
+    button {
+        font-size: 18px; /* Reduce font size */
+        height: calc(50vw * (65 / 400)); /* Scale button height proportionally */
+        width: 22vw;
     }
 }
+
+
+@media (max-width: 521px) { /* For med & large mobiles */
+    .main-frame {
+        width: 95vw; /* Scale the main frame width to fit smaller screens */
+        height: calc(90vw * (514 / 400)); /* Maintain aspect ratio */
+    }
+    #display {
+        width: 93%;
+        height: calc(90vw * (100 / 360)); /* Scale height proportionally */
+        font-size: 2.5rem; /* Adjust font size */
+    }
+    .buttons {
+        width: 95%; /* Adjust button container width */
+        height: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    button {
+        font-size: 18px; /* Reduce font size */
+        height: calc(90vw * (65 / 400)); /* Scale button height proportionally */
+        width: 22vw;
+    }
+}
+@media (max-width: 320px) {
+    .main-frame {
+        width: 95vw; /* Scale the main frame width to fit smaller screens */
+        height: calc(90vw * (514 / 400)); /* Maintain aspect ratio */
+    }
+    #display {
+        width: 93%;
+        height: calc(90vw * (100 / 360)); /* Scale height proportionally */
+        font-size: 2.5rem; /* Adjust font size */
+    }
+    .buttons {
+        width: 95%; /* Adjust button container width */
+        height: auto;
+        margin-top: 9px;
+    }
+    button {
+        font-size: 18px; /* Reduce font size */
+        height: calc(90vw * (65 / 400)); /* Scale button height proportionally */
+        width: 22vw;
+    }
+}
+

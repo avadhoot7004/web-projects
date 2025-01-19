@@ -67,12 +67,11 @@ button:active {
     background-color: rgba(60, 99, 124, 0.582);
 }
 
-/*@media (max-width: 768px) { /* For tablets and phones 
+@media (max-width: 768px) { /* For tablets and phones */
 #display {
-    font-size: 2rem; /* Reduce font size 
-    flex-direction: column; /* Stack items vertically 
-    width: 100%; /* Full width 
-    height: auto; /* Allow height to adjust naturally 
+    font-size: 2rem; /* Reduce font size */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    height: auto; /* Allow height to adjust naturally */
     }
-}*/
-
+}

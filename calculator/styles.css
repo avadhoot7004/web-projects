@@ -42,6 +42,7 @@ body {
     font-size: 3rem;
     padding: 10px;
     box-sizing: border-box;
+    text-align: right;
 }
 .buttons {
     width: 360px;

@@ -5,7 +5,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,60 +13,58 @@ body {
     margin: 0;
 }
 .main-frame {
-    width: 400px;
-    height: 514px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 8px;
+    width: 90vw;
+    max-width: 400px;
+    aspect-ratio: 4 / 5; /* for maintaining aspect ratio */
     background-color: rgb(40, 40, 40);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 .title {
-    margin: -14px 0;
-    padding: 5px;
+    width: 100%;
+    text-align: left;
+    margin: -22px;
+    padding: 0 0 6px 0;
     color: rgb(142, 140, 140);
     font-weight: bold;
-    width: 100%; 
-    text-align: left;
 }
 #display {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 360px;
-    height: 100px;
+    width: 100%;
+    height: 22%;
     border-radius: 8px;
     background-color: rgb(49, 49, 49);
     color: rgb(142, 140, 140);
     font-size: 3rem;
-    padding: 10px;
-    box-sizing: border-box;
     text-align: right;
+    padding: 10px;
 }
 .buttons {
-    width: 360px;
-    height: auto;
-    margin-top: 15px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 cols */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    width: 100%;
+    height: 71%; /* Proportional to the frame */
+    padding-top: 16px;
+    padding-bottom: 0;
 }
-button {            
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 8px;
+button {
     background-color: rgb(69, 0, 0);
     color: rgb(142, 140, 140);
-    font-size: 20px;
+    border-radius: 8px;
+    font-size: 1.3rem;
     font-weight: bold;
-    height: 67px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 button:hover {
     background-color: rgb(90, 30, 30);
 }
 button:active {
-    transform: scale(0.95);
     background-color: rgb(116, 57, 57);
 }
 .operator-btn {
@@ -79,71 +77,29 @@ button:active {
     background-color: rgba(60, 99, 124, 0.582);
 }
 
-@media (orientation: landscape) and (max-width: 768px) { /* for tablets in landscape */
+@media (max-width: 768px) {
     .main-frame {
         width: 95vw;
-        height: calc(50vw * (514 / 400)); 
+        aspect-ratio: 4 / 5;
     }
     #display {
-        width: 93%;
-        height: calc(90vw * (100 / 360)); 
-        font-size: 2.5rem; 
-    }
-    .buttons {
-        width: 60%; 
-        height: auto;
-        margin-top: 17px;
-        margin-bottom: 15px;
+        font-size: 3rem;
     }
     button {
-        font-size: 18px; 
-        height: calc(50vw * (65 / 400)); 
-        width: 22vw;
+        font-size: 1.4rem;
     }
 }
 
-
-@media (max-width: 521px) { /* For med & large mobiles */
+@media (max-width: 480px) {
     .main-frame {
-        width: 95vw;
-        height: calc(90vw * (514 / 400));
+        width: 100vw;
+        aspect-ratio: 4 / 5;
     }
     #display {
-        width: 93%;
-        height: calc(90vw * (100 / 360));
-        font-size: 2.5rem;
-    }
-    .buttons {
-        width: 95%; 
-        height: auto;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        font-size: 2.6rem;
     }
     button {
-        font-size: 18px; 
-        height: calc(90vw * (65 / 400));
-        width: 22vw;
-    }
-}
-@media (max-width: 320px) { /* for small screens */
-    .main-frame {
-        width: 95vw; 
-        height: calc(90vw * (514 / 400)); 
-    }
-    #display {
-        width: 93%;
-        height: calc(90vw * (100 / 360)); 
-        font-size: 2.5rem;
-    }
-    .buttons {
-        width: 95%;
-        height: auto;
-        margin-top: 9px;
-    }
-    button {
-        font-size: 18px; 
-        height: calc(90vw * (65 / 400)); 
-        width: 22vw;
+        font-size: 1.2rem;
     }
 }
 

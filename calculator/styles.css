@@ -59,11 +59,13 @@ button {
     font-size: 20px;
     font-weight: bold;
     height: 67px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 button:hover {
     background-color: rgb(90, 30, 30);
 }
 button:active {
+    transform: scale(0.95);
     background-color: rgb(116, 57, 57);
 }
 .operator-btn {

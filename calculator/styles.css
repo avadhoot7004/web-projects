@@ -78,25 +78,25 @@ button:active {
     background-color: rgba(60, 99, 124, 0.582);
 }
 
-@media (orientation: landscape) and (max-width: 768px) { 
+@media (orientation: landscape) and (max-width: 768px) { /* for tablets in landscape */
     .main-frame {
-        width: 95vw; /* Scale the main frame width to fit smaller screens */
-        height: calc(50vw * (514 / 400)); /* Maintain aspect ratio */
+        width: 95vw;
+        height: calc(50vw * (514 / 400)); 
     }
     #display {
         width: 93%;
-        height: calc(90vw * (100 / 360)); /* Scale height proportionally */
-        font-size: 2.5rem; /* Adjust font size */ 
+        height: calc(90vw * (100 / 360)); 
+        font-size: 2.5rem; 
     }
     .buttons {
-        width: 60%; /* Adjust button container width */
+        width: 60%; 
         height: auto;
         margin-top: 17px;
         margin-bottom: 15px;
     }
     button {
-        font-size: 18px; /* Reduce font size */
-        height: calc(50vw * (65 / 400)); /* Scale button height proportionally */
+        font-size: 18px; 
+        height: calc(50vw * (65 / 400)); 
         width: 22vw;
     }
 }
@@ -104,44 +104,44 @@ button:active {
 
 @media (max-width: 521px) { /* For med & large mobiles */
     .main-frame {
-        width: 95vw; /* Scale the main frame width to fit smaller screens */
-        height: calc(90vw * (514 / 400)); /* Maintain aspect ratio */
+        width: 95vw;
+        height: calc(90vw * (514 / 400));
     }
     #display {
         width: 93%;
-        height: calc(90vw * (100 / 360)); /* Scale height proportionally */
-        font-size: 2.5rem; /* Adjust font size */
+        height: calc(90vw * (100 / 360));
+        font-size: 2.5rem;
     }
     .buttons {
-        width: 95%; /* Adjust button container width */
+        width: 95%; 
         height: auto;
         margin-top: 15px;
         margin-bottom: 15px;
     }
     button {
-        font-size: 18px; /* Reduce font size */
-        height: calc(90vw * (65 / 400)); /* Scale button height proportionally */
+        font-size: 18px; 
+        height: calc(90vw * (65 / 400));
         width: 22vw;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 320px) { /* for small screens */
     .main-frame {
-        width: 95vw; /* Scale the main frame width to fit smaller screens */
-        height: calc(90vw * (514 / 400)); /* Maintain aspect ratio */
+        width: 95vw; 
+        height: calc(90vw * (514 / 400)); 
     }
     #display {
         width: 93%;
-        height: calc(90vw * (100 / 360)); /* Scale height proportionally */
-        font-size: 2.5rem; /* Adjust font size */
+        height: calc(90vw * (100 / 360)); 
+        font-size: 2.5rem;
     }
     .buttons {
-        width: 95%; /* Adjust button container width */
+        width: 95%;
         height: auto;
         margin-top: 9px;
     }
     button {
-        font-size: 18px; /* Reduce font size */
-        height: calc(90vw * (65 / 400)); /* Scale button height proportionally */
+        font-size: 18px; 
+        height: calc(90vw * (65 / 400)); 
         width: 22vw;
     }
 }

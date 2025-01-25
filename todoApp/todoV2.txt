@@ -1,4 +1,0 @@
-1. Writing longer task
-2. Deadline for task (date, time or hours left)
-3. Serial order of uncompleted task on top
-4. Animate line of task

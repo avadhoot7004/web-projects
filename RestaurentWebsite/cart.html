@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/color-glass/48/restaurant--v1.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="top-bar">
+            GOURMET BITES
+        </div>
+        <nav class="nav-container">
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="catering-info.html">CATERING</a></li>
+                    <li><a href="bookTable.html">BOOK A TABLE</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                </ul>
+                <div class="search-cart">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html"><img src="https://img.icons8.com/material-outlined/96/shopping-cart--v1.png" alt="cart-icon" class="cart-icon-img"></a>
+                        <span id="cart-items">0</span>
+                    </div>
+                </div>  
+            </div>
+        </nav>
+    
+        <div class="cart-headline">
+            <h2>
+                Your Cart
+            </h2>
+            
+        </div>
+
+        <div class="right-container">
+            <h5>Ready to checkout?</h5>
+            <div class="items-checkout">
+                <!-- <p>Item1 x 3 -> &#8377;10</p> -->
+            </div>
+            <a class="buy-now">Buy now</a>
+        </div>
+
+        <div class="main-cart-container">
+            <div class="left-container">
+                <div class="items-in-cart">
+                    <div class="item-with-pic">
+                        <img src="assets/cookie-756601_1280.jpg" alt="img" width="300">
+                        <div class="description-quantity-price">
+                            <p id="item-name">Chocolate Cake</p>
+                            <label for="quantity">Quantity</label>
+                            <input type="number" min="1" pattern="^[1-9]\d*$" required">
+                            <p id="item-price">&#8377;200</p>
+                            <a id="remove-anchor">Remove</a>
+                        </div>
+                    </div>
+                </div>
+                <p id="empty-message">Your cart is empty!</p>
+            </div>
+
+            
+        </div>
+
+
+    </main>
+
+        <footer>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div>
+                <p>&copy; 2023 Gourmet Bites. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script src="script.js"></script>
+</body>
+</html>

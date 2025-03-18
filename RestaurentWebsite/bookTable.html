@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a table</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/color-glass/48/restaurant--v1.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="top-bar">
+            GOURMET BITES
+        </div>
+        <nav class="nav-container">
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="catering-info.html">CATERING</a></li>
+                    <li><a href="bookTable.html">BOOK A TABLE</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                </ul>
+                <div class="search-cart">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html"><img src="https://img.icons8.com/material-outlined/96/shopping-cart--v1.png" alt="cart-icon" class="cart-icon-img"></a>
+                        <span id="cart-items">0</span>
+                    </div>
+                </div>  
+            </div>
+        </nav>
+            
+        <div class="book-headline">
+            <h2>
+                Book a Table
+            </h2>
+
+            <h2>
+                Please fill the following information for booking a table
+            </h2>
+        </div>
+        <div class="form-div">
+            <form>
+                <label for="name">Name</label><br>
+                <input type="text" required placeholder="Type your name here"><br>
+                <label for="name">How many people are dining?</label><br>
+                <input type="number" min="1" step="1" required placeholder="Enter number here"><br>
+                <label for="name">At what date?</label><br>
+                <input type="datetime-local" id="datetime-input" min="" required><br>
+                <label for="name">Do you prefer vegeterian or non-vegeterian?</label><br>
+                <select>
+                    <option value="select">Select an option</option>
+                    <option value="yes">Vegeterian</option>
+                    <option value="no">Non-Vegeterian</option>
+                    <option value="no">No preference</option>
+                </select>
+                
+                <input type="submit" id="table-book">
+            </form>
+        </div>
+
+    </main>
+
+        <footer>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div>
+                <p>&copy; 2023 Gourmet Bites. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
